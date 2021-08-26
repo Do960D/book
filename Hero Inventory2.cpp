@@ -46,7 +46,7 @@ int main()
 	unsigned short luck = rand();
 	unsigned short yourLuck = (luck % 2);
 
-	if (yourLuck == 0)
+	if (yourLuck == 0) & (inventory.empty())
 		cout << "\nYou have nothing.\n";
 	else
 	{
