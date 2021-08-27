@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -30,17 +30,17 @@ int main()
 		cout << *iter << endl;
 
 
-	cout << "\nThe item name '" << *myIterator << "' has ";
+	cout << "\nThe item name '" << *myIterator << "' has "; //variant 1
 	cout << (*myIterator).size() << " letters in it.\n";
 
-	cout << "\nThe item name '" << *myIterator << "' has ";
-	cout << myIterator->size() << " letters in it.\n";
+	cout << "\nThe item name '" << *myIterator << "' has "; //variant 2
+	cout << myIterator -> size() << " letters in it.\n";
 
 
 	cout << "\nYou recover a crossbow from a slain enemy";
-	inventory.insert(inventory.begin(), "crossbow");
+	inventory.insert(inventory.begin(), "crossbow"); // ?? inventory.incert("cossbow"); ?? 
 	cout << "\nYou items: \n";
-	for 
+	for								// this is for debag and check how iter works
 		(iter = inventory.begin(); 
 		iter != inventory.end(); 
 		++iter)
