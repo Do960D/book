@@ -12,32 +12,37 @@ using std::transform;
 
 int main()
 {
-	string usInp, game;
+
+	const string commandForkMessage = "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
+	string userInp, gameName;
 	vector<string> fvGameLst;
 	vector<string>::iterator kill;
 
 	cout << "This is your FAVORITE GAMES LIST!\n\n";
-	cout << "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
+	cout << commandForkMessage;
 
-	cin >> usInp;
-	transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
+	cin >> userInp;
+	transform(userInp.begin(), userInp.end(), userInp.begin(), ::toupper);
 
-	while (usInp == "ADD" || "DEL" || "ALL" || "EXIT")
+	while (userInp == "ADD" || "DEL" || "ALL" || "EXIT")
 	{
-		if (usInp == "ADD")
+		if (userInp == "ADD")
 		{
 			cout << "\nAdding mode. Whrite game name:\n";
-			cin >> game;
+			cin >> gameName;
 
-			fvGameLst.push_back(game);
+			fvGameLst.push_back(gameName);
 
-			cout << "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
+			cout << commandForkMessage;
 
-			cin >> usInp;
-			transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
+			cin >> userInp;
+			transform(userInp.begin(), userInp.end(), userInp.begin(), ::toupper);
+
+
+
 		}
 
-		if (usInp == "DEL")
+		if (userInp == "DEL")
 		{
 			//building in progress 
 
@@ -49,9 +54,8 @@ int main()
 			*/
 		}
 
-		if (usInp == "ALL")
+		if (userInp == "ALL")
 		{
-
 			if (fvGameLst.size() != 0)
 			{
 				cout << "\nFAVORITE GAMES LIST:\n";
@@ -60,32 +64,35 @@ int main()
 					cout << fvGameLst[i] << endl;
 				}
 
-				cout << "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
-				cin >> usInp;
-				transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
+				cout << commandForkMessage;
+				cin >> userInp;
+				transform(userInp.begin(), userInp.end(), userInp.begin(), ::toupper);
 			}
 
 			else
 			{
 				cout << "\nList is empty. At first add some.\n";
-				cout << "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
-				cin >> usInp;
-				transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
+				cout << commandForkMessage;
+				cin >> userInp;
+				transform(userInp.begin(), userInp.end(), userInp.begin(), ::toupper);
 			}
 		}
 
-		if (usInp == "EXIT")
+		if (userInp == "EXIT")
+			{
+			cout << "\nK, thx, bye!";
 			break;
+			}	
 
 		else
 		{
 			cout << "\nIncorrect input. Try again.\n";
-			cout << "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
+			cout << commandForkMessage;
 
-			cin >> usInp;
-			transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
+			cin >> userInp;
+			transform(userInp.begin(), userInp.end(), userInp.begin(), ::toupper);
 		}
 
 	}
-return 0;
+	return 0;
 }
