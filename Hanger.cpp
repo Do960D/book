@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -10,8 +10,6 @@ using std::endl;
 using std::vector;
 using std::string;
 using std::random_shuffle;
-//using std::;
-
 
 int main()
 {
