@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include<vector>
 #include <algorithm>
 
@@ -16,8 +16,8 @@ int main()
 	vector<string> fvGameLst;
 	vector<string>::iterator kill;
 
-	cout << "This is your FAVORIT GAME LIST!\n\n";
-	cout << "Type ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
+	cout << "This is your FAVORITE GAMES LIST!\n\n";
+	cout << "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
 
 	cin >> usInp;
 	transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
@@ -31,18 +31,18 @@ int main()
 
 			fvGameLst.push_back(game);
 
-			cout << "Type ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
+			cout << "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
 
 			cin >> usInp;
 			transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
 
-			continue;
+
 
 		}
 
 		if (usInp == "DEL")
 		{
-			//bilding in progress 
+			//building in progress 
 
 			/*
 			cout << "\nDeleting mode\n";
@@ -56,26 +56,23 @@ int main()
 		{
 			if (fvGameLst.size() != 0)
 			{
-				cout << "\nFAVORIT GAME LIST:\n";
+				cout << "\nFAVORITE GAMES LIST:\n";
 				for (unsigned int i = 0; i < fvGameLst.size(); i++)
 				{
 					cout << fvGameLst[i] << endl;
 				}
 
-				cout << "Type ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
+				cout << "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
 				cin >> usInp;
 				transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
-				continue;
-
 			}
 
 			else
 			{
 				cout << "\nList is empty. At first add some.\n";
-				cout << "Type ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
+				cout << "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
 				cin >> usInp;
 				transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
-				continue;
 			}
 		}
 
@@ -85,7 +82,7 @@ int main()
 		else
 		{
 			cout << "\nIncorrect input. Try again.\n";
-			cout << "Type ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.";
+			cout << "\nType ADD game name in list\nType DEL to remove game\nType ALL for view the list\nType EXIT to quit.\n";
 
 			cin >> usInp;
 			transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
