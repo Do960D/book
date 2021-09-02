@@ -35,9 +35,6 @@ int main()
 
 			cin >> usInp;
 			transform(usInp.begin(), usInp.end(), usInp.begin(), ::toupper);
-
-
-
 		}
 
 		if (usInp == "DEL")
@@ -54,6 +51,7 @@ int main()
 
 		if (usInp == "ALL")
 		{
+
 			if (fvGameLst.size() != 0)
 			{
 				cout << "\nFAVORITE GAMES LIST:\n";
@@ -89,5 +87,5 @@ int main()
 		}
 
 	}
-	return 0;
+return 0;
 }
