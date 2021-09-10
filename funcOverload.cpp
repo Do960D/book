@@ -1,8 +1,9 @@
 ﻿#include<iostream>
 #include<string>
+using std::string;
 
-int triple(int number);
-std::string triple(std::string text);
+int triple(int number); 
+string triple(string text); //'same' function but different type.
 
 int main()
 {
@@ -12,12 +13,13 @@ int main()
 	return 0;
 }
 
+
 int triple(int number)
 {
 	return (number * 3);
 }
 
-std::string triple(std::string text)
+string triple(string text)
 {
 	return (text + text + text);
 }
