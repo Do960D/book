@@ -37,8 +37,6 @@ std::string askText(std::string promt)
 	std::cin >> text;
 
 	return text;
-	return text;
-	return text;
 }
 
 void tellStory(std::string name, std::string noun, int number, std::string bodyPart, std::string verb)
