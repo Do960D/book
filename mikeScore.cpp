@@ -26,7 +26,7 @@ int main()
 void scoreOutput(int myScore, int& mikeScore)
 {
 	std::cout << "myScore is: " << myScore << "\n";
-	std::cout << "mikesScore is " << mikeScore << "\n\n";
+	std::cout << "mikesScore is: " << mikeScore << "\n\n";
 }
 
 int plus500(int box)
