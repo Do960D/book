@@ -1,8 +1,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
+//for random_shuffle
 #include <algorithm>
-#include <cctype> //uppercase translation
+
+//uppercase translation
+#include <cctype> 
 
 using std::cout;
 using std::cin;
@@ -10,6 +14,15 @@ using std::endl;
 using std::vector;
 using std::string;
 using std::random_shuffle;
+
+char userInput()
+{
+	char guess;
+	cout << "\nEnter your guess: ";
+	cin >> guess;
+
+	return guess;
+}
 
 int main()
 {
