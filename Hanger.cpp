@@ -1,10 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
 //for random_shuffle
 #include <algorithm>
-
 //uppercase translation
 #include <cctype> 
 
