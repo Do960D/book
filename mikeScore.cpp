@@ -1,4 +1,5 @@
-﻿#include<iostream>
+
+#include<iostream>
 
 void scoreOutput(int myScore, int& mikeScore);
 int plus500(int box);
@@ -34,5 +35,3 @@ int plus500(int box)
 	box += prize / 2;
 	return box;
 }
-
-
