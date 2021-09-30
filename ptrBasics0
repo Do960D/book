@@ -1,0 +1,53 @@
+#include<iostream>
+#include<string>
+
+using std::cout;
+
+void checkScore(int score) 
+{
+	std::cout << "score is: " << score << "\n";
+}
+
+
+
+int main() 
+{
+	int* pAPointer; //declarat a pointer
+	int* pScore = 0; //declarate a pointer and initilize it
+	int score = 1000; //declarate a variable and initilize it
+	pScore = &score; //assign a valure to a pointer
+
+	cout << "Assigning '&score' to 'pScore'\n\n";
+
+	cout << "'&score' is: " << &score << "\n"; //adress of variable 'score'
+	cout << "'pScore' is: " << pScore << "\n"; //adress that contains in pointer
+	checkScore(score);
+	cout << "'*pScore' is: " << *pScore << "\n\n"; //the valure that pointer direct to
+
+	cout << "Adding 500 to score\n";
+	score += 500;
+	checkScore(score);
+	cout << "'*pScore' is: " << *pScore << "\n\n";
+	
+	cout << "Assigning '&newScore' to 'pScore'\n";
+	int newScore = 5000;
+	pScore = &newScore;
+	cout << "'&newScore' is: " << &newScore << "\n\n";
+	cout << "'pScore' is: " << pScore << "\n";
+	cout << "'newScore' is: " << newScore << "\n";
+	cout << "'*pScore' is: " << *pScore << "\n\n";
+
+	cout << "Assigning '&str' to 'pStr'\n";
+	std::string str = "score";
+	std::string* pStr = &str; //pointer to the string object
+	cout << "'str' is: " << str << "\n";
+	cout << "'*pStr' is: " << *pStr << "\n";
+	cout << "'(*pStr).size()' is: " << (*pStr).size() << "\n";
+	cout << "'pStr -> size()' is: " << pStr->size() << "\n";
+
+	return 0;
+
+
+
+
+}
